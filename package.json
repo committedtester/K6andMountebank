@@ -1,0 +1,14 @@
+{
+  "name": "k6andmountebank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mock": "mb --configfile mountebank/imposters/k6Imposter.ejs --loglevel debug --localOnly"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mountebank": "^2.7.0"
+  }
+}

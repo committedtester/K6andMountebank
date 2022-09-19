@@ -1,0 +1,28 @@
+{
+    "predicates": [
+      {
+        "startsWith": {
+          "method": "GET",
+          "path": "/delay"
+        }
+      }
+    ],
+    "responses": [
+      {
+        "is": {
+          "statusCode": 200,
+          "body": "Path is ${PATH}"
+        },
+        "behaviors": [
+          { "wait": 2000 },
+          {
+            "copy": {
+              "from": "path",
+              "into": "${PATH}",
+              "using": { "method": "regex", "selector": ".*" }
+            }
+          }
+        ]
+      }
+    ]
+  }

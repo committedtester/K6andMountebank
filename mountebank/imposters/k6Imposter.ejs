@@ -1,0 +1,13 @@
+{
+    "port": 80,
+    "protocol": "http",
+    "name": "k6Imposter",
+    "recordRequests": false,
+    "defaultResponse": {
+        "statusCode": 200,
+        "body": "Default Response from Mountebank"
+      },
+    "stubs": [
+     <% include ../stubs/K6StubDelay.json %>
+    ]
+   }
