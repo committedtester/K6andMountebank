@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "mock": "mb --configfile mountebank/imposters/k6Imposter.ejs --loglevel debug --localOnly"
+    "mock": "mb --configfile mountebank/imposters/k6Imposter.ejs --loglevel debug --localOnly",
+    "k6": "k6 run dist/tests/getLocal.test.js "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "mountebank": "^2.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.3",
+    "@types/k6":"^0.39.1"
   }
 }

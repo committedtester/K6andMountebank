@@ -2,3 +2,4 @@ node_modules/
 mb.log
 mb1.log
 mb.pid
+dist
